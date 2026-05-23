@@ -1,4 +1,4 @@
-# NotiMon · 消息转发器
+# MsgFwd · 消息转发器
 
 一款 Android 通知与短信监控转发工具。实时监听系统通知和短信，根据自定义规则将消息推送到指定通道。
 
@@ -19,7 +19,7 @@
 
 ## 下载
 
-前往 [Releases](https://github.com/你的用户名/NotiMon/releases) 下载最新 APK。
+前往 [Releases](https://github.com/你的用户名/MsgFwd/releases) 下载最新 APK。
 
 ## 技术栈
 
@@ -36,8 +36,8 @@
 ## 构建
 
 ```bash
-git clone https://github.com/你的用户名/NotiMon.git
-cd NotiMon
+git clone https://github.com/你的用户名/MsgFwd.git
+cd MsgFwd
 ./gradlew assembleRelease
 ```
 
