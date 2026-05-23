@@ -19,7 +19,7 @@
 
 ## 下载
 
-前往 [Releases](https://github.com/2701629179/NotiMon/releases) 下载最新 APK。
+前往 [Releases](https://github.com/2701629179/MsgFwd/releases) 下载最新 APK。
 
 ## 技术栈
 
