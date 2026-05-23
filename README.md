@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NotiMon · 消息转发器
 
 一款 Android 通知与短信监控转发工具。实时监听系统通知和短信，根据自定义规则将消息推送到指定通道。
@@ -66,3 +67,7 @@ Copyright © 2024 项目作者
 本项目基于 [GNU General Public License v3.0](LICENSE) 发布。
 
 免费开源 · 禁止倒卖
+=======
+# MsgFwd
+安卓消息转发器
+>>>>>>> f95260cf65b9b2a34efa73a3786b6038bc3ced1d
