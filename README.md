@@ -1,95 +1,115 @@
-📱 MsgFwd · 安卓消息转发器
-一款轻量、稳定、高自定义的 Android 通知 / 短信监控转发工具
-实时监听系统通知与短信内容，支持自定义过滤规则，多通道自动推送，支持后台保活、开机自启，纯本地处理、隐私安全。
+# README\.md
 
+# MsgFwd · 安卓消息转发器
 
----
-✨ 项目特色
-- 全量监听：全局应用通知 + 短信实时抓取
-- 精准过滤：支持应用白名单、关键词匹配、完全匹配规则
-- 多通道推送：Webhook / Email / URL 跳转
-- 持久保活：前台服务 + 心跳机制 + 唤醒锁防杀
-- 开机自启：设备重启自动恢复监听服务
-- 配置互通：支持剪贴板快速导入/导出规则配置
-- 日志可视化：内置日志面板，实时查看推送记录
-- 隐私安全：所有数据本地运算，不上传第三方服务器
+一款简洁稳定、高度自定义的 Android 通知 \&amp; 短信监控转发工具，本地处理数据，安全无上传，支持多通道智能推送。
 
 ---
-📌 核心功能
-1. 消息监听
-- 通知监听：抓取任意应用通知标题、内容、包名
-- 短信监听：拦截短信，解析发送人、短信正文、时间
-2. 过滤规则
-- 全局监听 / 指定应用监听
-- 关键词包含匹配、完全相等匹配
-- 自定义黑白名单，精准过滤垃圾消息
-3. 多渠道推送
-- Webhook：支持 POST / GET / PUT / PATCH 标准 JSON 推送
-- SMTP 邮件：支持 SSL / TLS / STARTTLS 安全发送
-- URL 跳转：自定义 Scheme 链接唤醒其他应用
-4. 稳定保活能力
-- 前台服务常驻运行
-- AlarmManager 定时心跳保活
-- WakeLock 防止系统休眠查杀
-- 开机广播自动重启服务
+
+## 📌 功能介绍
+
+### 1\. 消息监听
+
+- **全局通知监听**：捕获手机内所有应用通知标题、内容、应用包名
+
+- **短信实时监听**：自动拦截短信，解析发送人、短信正文、接收时间
+
+### 2\. 智能过滤规则
+
+- 支持全局监听 / 自定义指定应用监听
+
+- 关键词包含匹配、全文完全匹配两种过滤模式
+
+- 可自定义黑白名单，精准过滤无用消息
+
+### 3\. 多通道推送
+
+- **Webhook**：支持 POST / GET / PUT / PATCH 请求，标准 JSON 格式推送
+
+- **SMTP 邮件推送**：兼容 SSL / TLS / STARTTLS 安全加密协议
+
+- **URL 跳转**：支持自定义 URL Scheme，唤醒第三方应用
+
+### 4\. 常驻保活能力
+
+- 前台服务常驻运行，避免后台被杀
+
+- AlarmManager 定时心跳保活机制
+
+- WakeLock 唤醒锁，防止系统休眠终止进程
+
+- 设备开机自启，重启自动恢复监听服务
+
+### 5\. 便捷工具
+
+- 规则配置剪贴板一键导入、导出
+
+- 内置日志面板，实时查看推送记录与运行状态
 
 ---
-🛠 技术栈
-分类
-技术选型
-开发语言
-Kotlin 1.9.20
-UI 框架
-Jetpack Compose + Material3
-项目架构
-MVVM (ViewModel + StateFlow)
-网络请求
-OkHttp / HttpURLConnection
-构建工具
-Gradle 8.5 + AGP 8.2.0
-最低适配
-Android 5.0 (API 21)
-目标版本
-Android 14 (API 34)
+
+## 🛠 技术栈
+
+|类别|技术详情|
+|---|---|
+|开发语言|Kotlin 1\.9\.20|
+|UI 框架|Jetpack Compose \+ Material3|
+|项目架构|MVVM（ViewModel \+ StateFlow）|
+|网络框架|OkHttp / HttpURLConnection|
+|构建工具|Gradle 8\.5 \+ AGP 8\.2\.0|
+|最低适配|Android 5\.0（API 21）|
+|目标版本|Android 14（API 34）|
 
 ---
-📲 下载安装
-可前往 Releases 下载最新正式版 APK
+
+## 📲 下载使用
+
+前往 [Releases](https://github.com/2701629179/MsgFwd/releases) 下载最新版本 APK
 
 ---
-🔨 本地编译构建
-支持 Windows / Mac / Linux 一键编译
+
+## 🔨 源码编译
+
+支持 Windows / Mac / Linux 全平台编译
+
+```Plain Text
 git clone https://github.com/2701629179/MsgFwd.git
 cd MsgFwd
 ./gradlew assembleRelease
+```
 
-编译输出路径：app/build/outputs/apk/release/
-
----
-🔐 权限说明
-权限名称
-使用用途
-INTERNET
-网络请求、Webhook、SMTP 推送
-NOTIFICATION_LISTENER
-读取系统应用通知
-RECEIVE_SMS / READ_SMS
-接收与读取短信内容
-FOREGROUND_SERVICE
-前台服务保活运行
-RECEIVE_BOOT_COMPLETED
-开机自启、重启恢复服务
-POST_NOTIFICATIONS
-前台服务常驻通知展示
-WAKE_LOCK
-防止系统休眠杀进程
+编译产物输出目录：`app/build/outputs/apk/release/`
 
 ---
-🛡 隐私声明
-本项目所有消息数据仅在本地设备处理，不会自动上传任何第三方服务器。推送目标、过滤规则均由用户自行配置，绝对保障用户隐私安全。
+
+## 🔐 权限说明
+
+|权限名称|使用用途|
+|---|---|
+|INTERNET|网络请求、Webhook、SMTP 推送服务|
+|NOTIFICATION\_LISTENER|读取系统全局应用通知|
+|RECEIVE\_SMS / READ\_SMS|接收、读取手机短信内容|
+|FOREGROUND\_SERVICE|前台服务常驻，保障后台运行|
+|RECEIVE\_BOOT\_COMPLETED|监听开机广播，实现开机自启|
+|POST\_NOTIFICATIONS|展示前台服务常驻通知|
+|WAKE\_LOCK|锁定设备唤醒状态，防止进程休眠被杀|
 
 ---
-📄 开源协议
+
+## 🛡 隐私声明
+
+本项目所有消息数据均在**本地设备处理运算**，不会自动上传至任何第三方服务器。推送通道、过滤规则均由用户自主配置，全程保障用户隐私安全。
+
+---
+
+## 📄 开源协议
+
 Copyright © 2024 项目作者
-本项目基于 GNU GPL v3.0 开源协议发布，开源免费、仅供学习使用，禁止私自倒卖、二次售卖。
-免费开源 · 禁止倒卖 · 学习交流专用
+
+本项目基于 **GNU GPL v3\.0** 协议开源，仅供学习交流使用。
+
+**免费开源 · 禁止倒卖 · 禁止二次售卖**
+
+
+
+> （注：文档部分内容可能由 AI 生成）
